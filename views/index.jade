@@ -1,0 +1,10 @@
+div.header
+    img.logo(src="/images/logo.gif")
+    h1 #{title} == Instagram + Google Street View Panoramas
+    p Exposing your public parts
+each image in images
+  div.creep-item
+    p Lat: #{image.location.lat} Long: #{image.location.long}
+    img(src="#{image.url}")
+    img(height="480",width="640",src="http://maps.googleapis.com/maps/api/streetview?size=640x480&location=#{image.location.lat},#{image.location.long}&heading=0&fov=90&pitch=0&sensor=false")
+    hr

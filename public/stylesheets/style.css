@@ -1,0 +1,27 @@
+body {
+  padding: 0 50px 50px 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+a {
+  color: #00b7ff;
+}
+img {
+  padding:5px;
+  float:left;
+  position:relative;
+}
+hr, div.creep-item {
+  clear:both;
+}
+.logo {
+    float:left;
+    height: 100px;
+    width: 100px;
+    margin-right:50px;
+}
+.header {
+    padding:10px;
+    background-color:#000;
+    color:#fff;
+    height:110px;
+}
