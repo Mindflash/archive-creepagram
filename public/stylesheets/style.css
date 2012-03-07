@@ -25,3 +25,14 @@ hr, div.creep-item {
     color:#fff;
     height:110px;
 }
+
+.floatlefthalf
+{
+    float:left;
+    width:49%;
+}
+.floatrighthalf
+{
+    float:right;
+    width:49%;
+}

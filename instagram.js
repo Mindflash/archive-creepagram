@@ -14,7 +14,8 @@ function getPopularImages(callback) {
             {
                 viewData.push({
                     location: { lat: o.location.latitude, long: o.location.longitude },
-                    url: o.images.standard_resolution.url
+                    url: o.images.standard_resolution.url,
+                    encodedUrl: encodeURIComponent(o.images.standard_resolution.url)
                 });
             }
         });

@@ -1,0 +1,16 @@
+div.header
+  img.logo(src="/images/logo.gif")
+  h1 Creepagram == Instagram + Google Street View
+  p Exposing your public parts at Latitude: #{image.location.lat} Longitude: #{image.location.long}
+div.creep-item
+  p Lat: #{image.location.lat} Long: #{image.location.long}
+  img(src="#{image.url}")
+  img(height="480",width="640",src="http://maps.googleapis.com/maps/api/streetview?size=640x480&location=#{image.location.lat},#{image.location.long}&heading=0&fov=90&pitch=0&sensor=false")
+  hr
+  div.floatlefthalf
+    | <iframe width="100%" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=#{image.location.lat},#{image.location.long}&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=42.581364,105.380859&amp;ie=UTF8&amp;t=h&amp;z=15&amp;ll=#{image.location.lat},#{image.location.long}&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=#{image.location.lat},#{image.location.long}&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=42.581364,105.380859&amp;ie=UTF8&amp;t=h&amp;z=15&amp;ll=#{image.location.lat},#{image.location.long}" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+  div.floatrighthalf
+    | <iframe width="100%" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=#{image.location.lat},#{image.location.long}&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=42.581364,105.380859&amp;ie=UTF8&amp;t=h&amp;z=5&amp;ll=#{image.location.lat},#{image.location.long}&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=#{image.location.lat},#{image.location.long}&amp;aq=&amp;sll=37.0625,-95.677068&amp;sspn=42.581364,105.380859&amp;ie=UTF8&amp;t=h&amp;z=5&amp;ll=#{image.location.lat},#{image.location.long}" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+div.footer
+  a(href="http://#{url}/") roll again
+  include('includes/google-analytics.html')

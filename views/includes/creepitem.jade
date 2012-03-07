@@ -1,14 +1,6 @@
-div.header
-  img.logo(src="/images/logo.gif")
-  h1 Creepagram == Instagram + Google Street View
-  p Exposing your public parts
-each image in images
   div.creep-item
     a(href="http://#{url}/ohmy/?img=#{image.encodedUrl}&lat=#{image.location.lat}&lng=#{image.location.long}",target="_blank")
-      div Lat: #{image.location.lat} Long: #{image.location.long}
+      p Lat: #{image.location.lat} Long: #{image.location.long}
       img(src="#{image.url}")
       img(height="480",width="640",src="http://maps.googleapis.com/maps/api/streetview?size=640x480&location=#{image.location.lat},#{image.location.long}&heading=0&fov=90&pitch=0&sensor=false")
     hr
-div.footer
-  a(href="http://#{url}/") refresh
-  include('includes/google-analytics.html')
